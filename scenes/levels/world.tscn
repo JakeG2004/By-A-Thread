@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://yb3gxbkt8l5y"]
+
+[ext_resource type="Script" path="res://scripts/controllerScripts/sceneManager.gd" id="1_vt066"]
+[ext_resource type="AudioStream" uid="uid://b8i54t4sq05n5" path="res://assets/sounds/music/wimdy.wav" id="2_1wwnn"]
+[ext_resource type="Script" path="res://scripts/controllerScripts/musicController.gd" id="3_73hky"]
+
+[node name="World" type="Node2D"]
+
+[node name="sceneManager" type="Node2D" parent="."]
+script = ExtResource("1_vt066")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_1wwnn")
+volume_db = -30.0
+autoplay = true
+script = ExtResource("3_73hky")

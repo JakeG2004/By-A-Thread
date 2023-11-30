@@ -1,0 +1,11 @@
+Background - https://monibtaha.itch.io/mountains-parallaxe-background
+Player sprites - Games Plus James https://www.youtube.com/watch?v=p23J5-1OTAM
+House Sprites - https://alexti-dev.itch.io/houses
+Tilemap - https://analogstudios.itch.io/mountain-pico-platformer-tileset
+Interior objects - https://openpixelproject.itch.io/opp2017village
+Interior tilemap - https://opengameart.org/sites/default/files/tilesets_edit_5.zip
+Dialogue Manager by Nathan Hoad
+Scripting credits in each script
+
+
+

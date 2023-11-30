@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxodj3jg0fvdc"]
+
+[ext_resource type="Script" path="res://scripts/controllerScripts/cameraController.gd" id="1_id2eq"]
+[ext_resource type="PackedScene" uid="uid://cui77dfyy2c8" path="res://scenes/levels/bg.tscn" id="2_2kli8"]
+[ext_resource type="PackedScene" uid="uid://br7c84yscssf2" path="res://scenes/controllers/pauseMenu.tscn" id="3_dusrc"]
+
+[node name="MultiCam" type="Camera2D"]
+script = ExtResource("1_id2eq")
+min_zoom = 2.0
+max_zoom = 2.0
+yOffSet = 0
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_2kli8")]
+scroll_ignore_camera_zoom = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -244.0
+offset_top = -184.0
+offset_right = -204.0
+offset_bottom = -144.0
+scale = Vector2(4.69006, 4.31526)
+metadata/_edit_use_anchors_ = true
+
+[node name="pauseMenu" parent="Control" instance=ExtResource("3_dusrc")]
+visible = false
+z_index = 200
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -20.0
+offset_bottom = -20.0
+size_flags_horizontal = 6

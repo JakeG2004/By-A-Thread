@@ -1,0 +1,151 @@
+[gd_scene load_steps=22 format=3 uid="uid://br7c84yscssf2"]
+
+[ext_resource type="Script" path="res://scripts/UI & Sound Scripts/pauseMenu.gd" id="1_1rljb"]
+[ext_resource type="Texture2D" uid="uid://cmelsiob1buk4" path="res://assets/textures/gui/menuItems/levels/loadlevel.png" id="2_pqf2q"]
+[ext_resource type="Texture2D" uid="uid://cyjqitr83dfst" path="res://assets/textures/gui/menuItems/levels/lvl1.png" id="3_cxtjt"]
+[ext_resource type="Texture2D" uid="uid://dihqwt3lj21dw" path="res://assets/textures/gui/menuItems/levels/lvl2.png" id="4_sxj8l"]
+[ext_resource type="Texture2D" uid="uid://bl1u7sdwephdx" path="res://assets/textures/gui/menuItems/levels/lvl3.png" id="5_cptxl"]
+[ext_resource type="Texture2D" uid="uid://cufarn3cnso2q" path="res://assets/textures/gui/menuItems/levels/lvl4.png" id="6_31gqi"]
+[ext_resource type="Texture2D" uid="uid://cout0ogdbyodi" path="res://assets/textures/gui/menuItems/ressume.png" id="6_xk7ic"]
+[ext_resource type="Texture2D" uid="uid://btp64myvhwbu3" path="res://assets/textures/gui/menuItems/restart.png" id="7_18ynb"]
+[ext_resource type="Texture2D" uid="uid://c5qjr4et10wtn" path="res://assets/textures/gui/menuItems/levels/lvl5.png" id="7_wpej4"]
+[ext_resource type="Texture2D" uid="uid://d1ax7hilfju7t" path="res://assets/textures/gui/menuItems/menu.png" id="8_r48o4"]
+[ext_resource type="Texture2D" uid="uid://4klaa02si58p" path="res://assets/textures/gui/menuItems/controls/controls.png" id="9_he1wx"]
+[ext_resource type="Texture2D" uid="uid://xq8olqh3esei" path="res://assets/textures/gui/menuItems/controls/up.png" id="10_svxk2"]
+[ext_resource type="Texture2D" uid="uid://dhhtx4gx31an3" path="res://assets/textures/gui/menuItems/creditsoption.png" id="11_s0gd6"]
+[ext_resource type="Texture2D" uid="uid://d2sahycdw7rdl" path="res://assets/textures/gui/menuItems/controls/left.png" id="11_wtr5s"]
+[ext_resource type="Texture2D" uid="uid://dlkglr0xulwnu" path="res://assets/textures/gui/menuItems/controls/down.png" id="12_l0y6u"]
+[ext_resource type="Texture2D" uid="uid://c20idxlu304cc" path="res://assets/textures/gui/menuItems/controls/right.png" id="13_t1cql"]
+[ext_resource type="Texture2D" uid="uid://b7a6ivd23dac2" path="res://assets/textures/gui/menuItems/controls/cut.png" id="14_6mcvk"]
+[ext_resource type="Texture2D" uid="uid://bgbclblkm8bej" path="res://assets/textures/gui/menuItems/controls/climbrope.png" id="15_146ut"]
+[ext_resource type="Shader" path="res://materials/pauseMenu.gdshader" id="16_gm8pk"]
+[ext_resource type="Texture2D" uid="uid://767tjw8pyh82" path="res://assets/textures/gui/tooltips/restart.png" id="19_swrd0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dv3np"]
+shader = ExtResource("16_gm8pk")
+shader_parameter/amount = 2.5
+
+[node name="pauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.539138, 0.620519)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("1_1rljb")
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+
+[node name="levelContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="MenuButton" type="MenuButton" parent="CanvasLayer/CenterContainer/BoxContainer/levelContainer"]
+layout_mode = 2
+icon = ExtResource("2_pqf2q")
+flat = false
+item_count = 5
+popup/item_0/text = ""
+popup/item_0/icon = ExtResource("3_cxtjt")
+popup/item_0/id = 0
+popup/item_1/text = ""
+popup/item_1/icon = ExtResource("4_sxj8l")
+popup/item_1/id = 1
+popup/item_2/text = ""
+popup/item_2/icon = ExtResource("5_cptxl")
+popup/item_2/id = 2
+popup/item_3/text = ""
+popup/item_3/icon = ExtResource("6_31gqi")
+popup/item_3/id = 3
+popup/item_4/text = ""
+popup/item_4/icon = ExtResource("7_wpej4")
+popup/item_4/id = 4
+
+[node name="mainMenu" type="VBoxContainer" parent="CanvasLayer/CenterContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="resume" type="Button" parent="CanvasLayer/CenterContainer/BoxContainer/mainMenu"]
+layout_mode = 2
+icon = ExtResource("6_xk7ic")
+icon_alignment = 1
+
+[node name="restart level" type="Button" parent="CanvasLayer/CenterContainer/BoxContainer/mainMenu"]
+layout_mode = 2
+icon = ExtResource("7_18ynb")
+icon_alignment = 1
+
+[node name="menu" type="Button" parent="CanvasLayer/CenterContainer/BoxContainer/mainMenu"]
+layout_mode = 2
+icon = ExtResource("8_r48o4")
+icon_alignment = 1
+
+[node name="credits" type="Button" parent="CanvasLayer/CenterContainer/BoxContainer/mainMenu"]
+layout_mode = 2
+icon = ExtResource("11_s0gd6")
+icon_alignment = 1
+
+[node name="ropeColor" type="ColorPickerButton" parent="CanvasLayer/CenterContainer/BoxContainer/mainMenu"]
+layout_mode = 2
+text = "Rope Color"
+color = Color(0.482353, 0.247059, 0, 1)
+edit_alpha = false
+
+[node name="controlCointainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="MenuButton" type="MenuButton" parent="CanvasLayer/CenterContainer/BoxContainer/controlCointainer"]
+layout_mode = 2
+icon = ExtResource("9_he1wx")
+flat = false
+icon_alignment = 1
+item_count = 7
+popup/item_0/text = ""
+popup/item_0/icon = ExtResource("10_svxk2")
+popup/item_0/id = 0
+popup/item_1/text = ""
+popup/item_1/icon = ExtResource("11_wtr5s")
+popup/item_1/id = 1
+popup/item_2/text = ""
+popup/item_2/icon = ExtResource("12_l0y6u")
+popup/item_2/id = 2
+popup/item_3/text = ""
+popup/item_3/icon = ExtResource("13_t1cql")
+popup/item_3/id = 3
+popup/item_4/text = ""
+popup/item_4/icon = ExtResource("14_6mcvk")
+popup/item_4/id = 4
+popup/item_5/text = ""
+popup/item_5/icon = ExtResource("15_146ut")
+popup/item_5/id = 5
+popup/item_6/text = ""
+popup/item_6/icon = ExtResource("19_swrd0")
+popup/item_6/id = 6
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_dv3np")
+layout_mode = 0
+offset_left = 1068.37
+offset_top = 522.143
+offset_right = 1068.37
+offset_bottom = 522.143
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/CenterContainer/BoxContainer/mainMenu/resume" to="CanvasLayer" method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/BoxContainer/mainMenu/restart level" to="CanvasLayer" method="_on_restart_level_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/BoxContainer/mainMenu/menu" to="CanvasLayer" method="_on_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/BoxContainer/mainMenu/credits" to="CanvasLayer" method="_on_credits_pressed"]
+[connection signal="color_changed" from="CanvasLayer/CenterContainer/BoxContainer/mainMenu/ropeColor" to="CanvasLayer" method="_on_rope_color_color_changed"]

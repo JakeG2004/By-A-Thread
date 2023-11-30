@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cl8mm4nmtk8oc"
+path="res://.godot/imported/cabin.dialogue-df5620e93823cbbd8fbf530d2e239161.tres"
+
+[deps]
+
+source_file="res://dialogue/cabin.dialogue"
+dest_files=["res://.godot/imported/cabin.dialogue-df5620e93823cbbd8fbf530d2e239161.tres"]
+
+[params]
+
+defaults=true
